@@ -1,0 +1,60 @@
+---------------------------------------- ADD DOCUMENTS !!!
+
+.\.venv\Scripts\activate
+python -m uvicorn app.main:app --reload
+
+npm start
+
+---------------------------------------------------------------------
+
+# Corrected Mental Model
+1. SQL Server (data layer)
+2. FastAPI (backend logic + API)
+3. React (frontend UI)
+4. Leaflet (map inside frontend)
+5. bootstrap
+
+112 Call → Transcript → AI Draft → Human Validation → Signal DB → Map
+
+-------------------------------------------------------------------------------
+
+ivanov, petrov, georgiev, dimitrov, nikolov, admin, petkova, radoslavov, lilova
+
+print(hash_password("Ivan2001Ivanov"))
+print(hash_password("Petar1995Petrov"))
+print(hash_password("Georgi2004Georgiev"))
+print(hash_password("Dimitar1989Dimitrov"))
+print(hash_password("Nikolay1999Nikolov"))
+print(hash_password("Admin1234"))
+print(hash_password("Petka2000Petkova"))
+print(hash_password("Radostin1997Radoslavov"))
+print(hash_password("Lili1977Lilova"))
+
+$2b$12$NeTZ8dMNotCBWasoEhKtIeyrpFWhyEpxKeYBDjdTD2jTGjSsNfwqW
+$2b$12$eKUm8W8ozBp9ZRQ0/PdQCOfCNeOz.2cZzDpepEZ3zQ5occTNMnK/a
+$2b$12$rIYFOahd9wHuHTiiTtpOPOw/87DU4XBsuhSozwJ8tfTUbObOR91cS
+$2b$12$Dw7d/.aH1ycfRWnR52dgtOthM2vLCLlJilT2otZGi/r/qXBrt7Ih2
+$2b$12$94z5ljK.jBMNtQibl8WhYuYYOlxig2MCqSWvP8.nInDTymYQYZndC
+$2b$12$xSTPWnf0/1dd7rXvyN3yA.M/a61dHrPxU2t.nDEVMLsh01kKmcAPq
+$2a$12$N0n3v5SJzTjitKjlIUtybuY67GMIp9qALI3Xt3VuTOpDHHlRlu74W
+$2a$12$9FzZBH6xu.aCnZsbrdQQKuHbi//gVJXOiNdFad6y9hwia0.C1zI1W
+$2a$12$buEnY0d.W/i6AvVV8wa1yu/OEdG8ojnY4T7rq8h6lATaUshZcg6ua
+
+------------------------------------------------------------------------------------------------------------------------
+
+SELECT
+    t.name AS TableName,
+    cc.name AS ConstraintName,
+    cc.definition
+FROM sys.check_constraints cc
+JOIN sys.tables t
+    ON cc.parent_object_id = t.object_id
+ORDER BY t.name;
+--------------------------------------------
+Admin, Officer, Dispatcher - role
+
+Low, Medium, High - severity
+
+Pending, Assigned, InProgress, Resolved, Rejected - status
+
+IncidentReport, WitnessStatement, PhotoEvidence, VideoEvidence, Citation, ResolutionReport, EvidenceAttachment - docType
